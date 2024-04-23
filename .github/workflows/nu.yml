@@ -1,0 +1,29 @@
+name: send nudes
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # every 5 minutes
+
+
+jobs:
+  check-embarquement:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hustcer/setup-nu@v3.9
+        with:
+          version: "0.87"
+
+      - name: run example nu-shell script
+        run: nu send-nudes.nu 
+        env:
+          GRIST_APIKEY: ${{ secrets.GRIST_APIKEY }}
+          GRIST_DOC: ${{ secrets.GRIST_DOC }}
+          GRIST_DOMAIN: ${{ secrets.GRIST_DOMAIN }}
+          GRIST_ORG: ${{ secrets.GRIST_ORG }}
+          GRIST_WORKSPACE: ${{ secrets.GRIST_WORKSPACE }}
+          MAIL_USER: ${{ secrets.MAIL_USER }}
+          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+          MAIL_TABLE: ${{ secrets.MAIL_TABLE }}
+          MAIL_MAX_SEND: ${{ secrets.MAIL_MAX_SEND }}
+

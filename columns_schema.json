@@ -1,0 +1,16 @@
+[{
+    "id": "recipients",
+    "fields": { "label": "recipients" }
+  }, {
+    "id": "subject",
+    "fields": { "label": "subject" }
+  }, {
+    "id": "message",
+    "fields": { "label": "message" }
+  }, {
+    "id": "sent",
+    "fields": { "label": "sent", "type": "DateTime:Europe/Paris" }
+  }, {
+    "id": "log",
+    "fields": { "label": "log" }
+}]
