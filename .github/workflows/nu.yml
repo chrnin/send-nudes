@@ -1,8 +1,6 @@
 name: send nudes
 
-on:
-  push:
-    - master
+on: push
 #  schedule:
 #    - cron: "*/5 * * * *"   # every 5 minutes
 
